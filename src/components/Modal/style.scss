@@ -3,6 +3,9 @@
 $width: 400px;
 $bigWidth: 600px;
 
+$mobileWidth: 280px;
+$mobileBigWidth: 480px;
+
 .modal-mask {
     position: fixed;
     top: 0;
@@ -16,6 +19,7 @@ $bigWidth: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 11;
 
     .modal {
         margin-top: -50px;
@@ -74,5 +78,22 @@ $bigWidth: 600px;
 
     .modal {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-mask {
+        .modal {
+            margin-top: 0;
+            padding: 18px 20px;
+        }
+
+        .modal-small {
+            width: $mobileWidth;
+        }
+
+        .modal-big {
+            width: $mobileBigWidth;
+        }
     }
 }

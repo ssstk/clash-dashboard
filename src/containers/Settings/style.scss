@@ -27,8 +27,6 @@
         line-height: 17px;
 
         .modify-btn {
-            margin-left: 5px;
-            font-size: 12px;
             color: $color-primary-dark;
             cursor: pointer;
         }
@@ -75,6 +73,22 @@
 
         &:hover {
             color: $color-primary-darken;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-card {
+        // hack <Row />
+        .row {
+            flex-direction: column;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            > .column {
+                width: 100%;
+                margin: 10px 0;
+            }
         }
     }
 }
